@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Lenguaje de marcas</title>
+    <meta name="author" content="Jorge Bernal Barriga">
+    <meta name="description" content="Hito 1 2º Trimestre">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>BLOG DE PROGRAMACIÓN</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Información sobre JSON </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="xml.html">XML</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="json.html">JSON</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-9">
+                <!-- Contenido de la primera columna -->
+                <div class="my-container">
+                    <h2>JSON</h2>
+            
+                    <div class="section">
+                        <h3>HISTORIA</h3>
+                        <p>
+                            JSON (JavaScript Object Notation) es un formato de intercambio de datos ligero que se utiliza para la comunicación entre sitios web y servidores. Está basado en un subconjunto del lenguaje de programación JavaScript y se utiliza comúnmente para transmitir datos en aplicaciones web.
+                        </p>
+                        <p>
+                            La historia de JSON se remonta a principios de la década de 2000, cuando se desarrolló como una alternativa a XML (eXtensible Markup Language) para el intercambio de datos entre sistemas. Antes de JSON, XML era el formato de intercambio de datos más utilizado, pero se consideraba engorroso y difícil de analizar. JSON, por otro lado, fue diseñado para ser fácil de leer y escribir, lo que lo convierte en una opción más atractiva para los desarrolladores.
+                        </p>
+                        <p>
+                            Una de las principales razones por las que JSON se convirtió en el formato predominante en el mundo del intercambio de datos es su simplicidad. Está basado en un subconjunto de JavaScript, lo que significa que es familiar para la mayoría de los desarrolladores. Además, es un formato de texto, lo que significa que puede ser fácilmente leído y escrito tanto por humanos como por máquinas.
+                        </p>
+                        <p>
+                            JSON es un subconjunto de JavaScript, esto significa que se adhiere a las reglas de sintaxis de JavaScript, pero es aún más estricto en cómo debe ser formateado. Es un formato independiente que se puede utilizar con cualquier lenguaje de programación, no solo con JavaScript. Sin embargo, dado que está basado en JavaScript, es fácil convertir datos JSON en objetos JavaScript y viceversa. Esto lo convierte en una opción conveniente para transmitir datos en aplicaciones web, donde los datos a menudo se utilizan en el código JavaScript.
+                        </p>
+                        <p>
+                            JSON también es un formato para almacenar datos en forma de archivo. A menudo se utiliza para almacenar datos de configuración, ajustes de aplicaciones y otros tipos de datos que deben almacenarse en un formato legible por máquinas.
+                        </p>
+                        <p class="source">
+                            Información obtenida de: <a href="https://ralexrivero.medium.com/entendiendo-json-su-historia-usos-y-tecnicas-de-conversion-c84b5faacf5c">https://ralexrivero.medium.com/entendiendo-json-su-historia-usos-y-tecnicas-de-conversion-c84b5faacf5c</a>
+                        </p>
+                    </div>
+            
+                    <div class="section">
+                        <h3>NORMAS DE USO Y SINTAXIS</h3>
+                        <p>
+                            En JSON existen dos tipos de elementos
+                        </p>
+                        <ul>
+                            <li>Matrices (arrays): Las matrices son listas de valores separados por comas. Las matrices se escriben entre corchetes [ ]</li>
+                            <li>Objetos (objects): Los objetos son listas de parejas nombre / valor. El nombre y el valor están separados por dos puntos : y las parejas están separadas por comas. Los objetos se escriben entre llaves { } y los nombres de las parejas se escriben siempre entre comillas dobles.</li>
+                            <li>Un documento JSON está formado por un único elemento (un objeto o una matriz).</li>
+                            <li>Tanto en los objetos como en las matrices, el último elemento no puede ir seguido de una coma.</li>
+                            <li>Los espacios en blanco y los saltos de línea no son significativos, es decir, puede haber cualquier número de espacios en blanco o saltos de línea separando cualquier elemento o símbolo del documento.</li>
+                            <li>Los valores (tanto en los objetos como en las matrices) pueden ser:</li>
+                        </ul>
+                        <ul>
+                            <li>Números: enteros, decimales o en notación exponencial. El separador decimal es el punto ., un número negativo empieza por el signo menos - y el indicador de la notación exponencial es e o E. Los números positivos no pueden empezar por el signo +, los números no pueden empezar por varios ceros o por un cero seguido de otra cifra.</li>
+                            <li>Cadenas: Las cadenas se escriben entre comillas dobles. Los caracteres especiales y los valores Unicode se escriben con una contrabarra \ delante. Los caracteres que deben escribirse siempre como caracteres especiales son \" (comillas), \\ (contrabarra), \b (retroceso), \f (salto de página), \n (salto de línea), \r (retorno de carro), \t (tabulador) y los caracteres unicode (\u...). El carácter / (barra) puede escribirse como carácter / o como carácter especial \/ (suele ser necesario cuando el contenido es código html y la barra indica un cierre de etiquetas).</li>
+                            <li>Los valores true, false y null. Estos valores se escriben sin comillas.</li>
+                            <li>Objetos y matrices. Puede haber objetos y matrices dentro de objetos y de matrices, sin límite de anidamiento.</li>
+                        </ul>
+                        <p>
+                            Los ficheros JSON no pueden contener comentarios.
+                        </p>
+                        <p class="source">
+                            Información obtenida de: <a href="https://www.mclibre.org/consultar/informatica/lecciones/formato-json.html">https://www.mclibre.org/consultar/informatica/lecciones/formato-json.html</a>
+                        </p>
+                    </div>
+
+                    <div class="section">
+                        <h3>APLICACIONES EN EL ÁMBITO EMPRESARIAL</h3>
+                        <p>
+                            Intercambio de Datos:
+                            <br>
+                            • JSON es ampliamente utilizado para el intercambio de datos entre clientes y servidores en aplicaciones web y servicios web.
+                        </p>
+                        <p>
+                            APIs (Interfaz de Programación de Aplicaciones):
+                            <br>
+                            • Muchas APIs utilizan JSON para la transmisión de datos debido a su legibilidad y simplicidad.
+                        </p>
+                        <p>
+                            Configuración y Almacenamiento de Datos:
+                            <br>
+                            • Se utiliza para almacenar configuraciones y datos estructurados en sistemas empresariales.
+                        </p>
+                        <p>
+                            Formato de Registro:
+                            <br>
+                            • JSON se usa en registros de eventos y sistemas de registro para almacenar información de forma estructurada.
+                        </p>
+                        <p>
+                            Integración de Sistemas:
+                            <br>
+                            • Facilita la integración de sistemas heterogéneos, ya que es fácil de entender y procesar en diferentes plataformas.
+                        </p>
+                        <p>
+                            Bases de Datos NoSQL:
+                            <br>
+                            • Algunas bases de datos NoSQL utilizan JSON como formato para almacenar y consultar datos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        
+
+            <div class="col-md-3">
+                <!-- Contenido de la segunda columna -->
+                <h2>Síguenos en redes:</h2>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://www.facebook.com/" class="social-icon" target="_blank">
+                            <img src="Imagenes/descarga (1).png" alt="Facebook" style="width: 30px; height: 30px;">
+                            <span class="social-name">Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/" class="social-icon" target="_blank">
+                            <img src="Imagenes/descarga (2).png" alt="Twitter" style="width: 30px; height: 30px;">
+                            <span class="social-name">Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" class="social-icon" target="_blank">
+                            <img src="Imagenes/descarga (3).jpg" alt="Instagram" style="width: 30px; height: 30px;">
+                            <span class="social-name">Instagram</span>
+                        </a>
+                    </li>
+                    <!-- Agrega más íconos y enlaces según sea necesario -->
+                </ul>
+            
+                <h2>Categorías:</h2>
+                <ul class="list-unstyled categories-list">
+                    <li><a href="https://www.w3schools.com/html/">HTML</a></li>
+                    <li><a href="https://www.w3schools.com/xml/xml_whatis.asp">XML</a></li>
+                    <li><a href="https://www.w3schools.com/java/">Java</a></li>
+                    <!-- Agrega más categorías según sea necesario -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light text-center py-3">
+        <p>&copy; 2024 Blog de Programación. Jorge Bernal Barriga.</p>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
